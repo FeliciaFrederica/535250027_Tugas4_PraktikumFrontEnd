@@ -260,3 +260,41 @@ a {
     text-align: center;
   }
 }
+
+/* BACK TO TOP BUTTON */
+.back-to-top {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 1000;
+
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f4a9c8;
+  border-radius: 50%;
+
+  background: #fff0f6;
+  color: #e879aa;
+
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(232, 121, 170, 0.2);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.back-to-top:hover {
+  background: #ffd6e7;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 18px;
+    bottom: 20px;
+    width: 46px;
+    height: 46px;
+    font-size: 28px;
+  }
+}
