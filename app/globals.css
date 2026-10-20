@@ -1,6 +1,6 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffafc;
+  --foreground: #594653;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,5 +38,149 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(255, 249, 243, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #f7dce8;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  min-height: 82px;
+  margin: 0 auto;
+  padding: 16px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  text-decoration: none;
+  color: #80536a;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo-text span {
+  color: #ed8db7;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  padding: 10px 15px;
+  border-radius: 30px;
+
+  color: #896d7b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #d85d96;
+  background: #f8eaf0;
+  transform: translateY(-2px);
+}
+
+.navbar-link.active {
+  color: #c94f88;
+  background: #f2dce6;
+}
+
+.active-heart {
+  font-size: 10px;
+}
+
+.menu-toggle {
+  display: none;
+
+  border: none;
+  border-radius: 12px;
+  padding: 8px 12px;
+
+  background: #f2dce6;
+  color: #c94f88;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    min-height: 72px;
+    padding: 14px 20px;
+    flex-wrap: wrap;
+  }
+
+  .logo-icon {
+    font-size: 27px;
+  }
+
+  .logo-text {
+    font-size: 17px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
+
+    padding: 12px;
+    background: #fff4f8;
+    border: 1px solid #f7dce8;
+    border-radius: 20px;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-link {
+    justify-content: center;
+    padding: 12px 16px;
   }
 }
